@@ -1,79 +1,48 @@
 #include <stdio.h>
 int main() {
-    int a,v,age,AKSH=0,VIV=0,chp=0,chs=0,JOH=0,PRN=0;
-    printf("Enter the no of voters");
-    scanf("%d",&v);
-    a=1;
-    while (a<=v)
+    float phy,eng,mth,chem,bio,avg,perc;
+    printf("Enter your marks for Physics : ");
+    scanf("%f",&phy);
+    printf("Your marks for English : ");
+    scanf("%f",&eng);
+    printf("Your marks for Maths : ");
+    scanf("%f",&mth);
+    printf("Your marks for Chemistry : ");
+    scanf("%f",&chem);
+    printf("Your marks for Biology : ");
+    scanf("%f",&bio);
+    avg=(phy+eng+mth+chem+bio)/5;
+    if(avg>=95)
     {
-        printf("Enter your age");
-        scanf("%d",&age);
-        if (age>=18)
-        {
-            printf("You are eligible to vote");
-            printf("\n President");
-            printf("\n1.for Aakash \n2.for Vivek");
-            printf("\nEnter your choice");
-            scanf("%d",&chp);
-            switch (chp)
-            {
-                case 1:
-                    AKSH++;
-                break;
-                case 2:
-                    VIV++;
-                break;
-                default:
-                    printf("Invalid choice");
-            }
-            printf("\n Secretary");
-            printf("\n1.for John \n2.for Prnav");
-            printf("\nEnter your choice");
-            scanf("%d",&chs);
-            switch (chp)
-            {
-                case 1:
-                    JOH++;
-                break;
-                case 2:
-                    PRN++;
-                break;
-                default:
-                    printf("Invalid choice");
-            }
+    printf("Your grade is A+");
         }
-        else {
-            printf("You are not eligible to vote");
-        }
-        a++;
-    }
-    printf("\n President \nAakash secured %d votes\nVivek Secured %d Votes",AKSH,VIV);
-    if (AKSH>VIV)
-        {
-        printf("\nAakash won");
-    }
-    else if (AKSH==VIV)
+    else if(avg>=90)
     {
-        printf("\nIts a tie");
+        printf("Your grade is A");
+    }
+    else if(avg>=80)
+    {
+        printf("Your grade is B");
+    }
+    else if(avg>=70)
+    {
+        printf("Your grade is C");
+    }
+    else if(avg>=60)
+    {
+        printf("Your grade is D");
+    }
+    else if(avg>=50)
+    {
+        printf("Your grade is D-");
     }
     else
     {
-        printf("\nVivek won");
+        printf("You have failed");
     }
-    printf("\nSecretary \n John Secured %d Votes\nPranav Secured %d votes",JOH,PRN);
-    if (JOH>PRN)
-    {
-        printf("\nJohn won");
-    }
-    else if (JOH==PRN)
-    {
-        printf("\nIts a tie");
-    }
-    else
-    {
-        printf("\nPranav won");
-    }
-
+    perc=((mth+phy+bio+chem+eng)/500)*100;
+    printf("\nYour Percentage is %f",perc);
     return 0;
-}
 
+
+}
