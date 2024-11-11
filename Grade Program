@@ -1,0 +1,48 @@
+#include <stdio.h>
+int main() {
+    float phy,eng,mth,chem,bio,avg,perc;
+    printf("Enter your marks for Physics : ");
+    scanf("%f",&phy);
+    printf("Your marks for English : ");
+    scanf("%f",&eng);
+    printf("Your marks for Maths : ");
+    scanf("%f",&mth);
+    printf("Your marks for Chemistry : ");
+    scanf("%f",&chem);
+    printf("Your marks for Biology : ");
+    scanf("%f",&bio);
+    avg=(phy+eng+mth+chem+bio)/5;
+    if(avg>=95)
+    {
+    printf("Your grade is A+");
+        }
+    else if(avg>=90)
+    {
+        printf("Your grade is A");
+    }
+    else if(avg>=80)
+    {
+        printf("Your grade is B");
+    }
+    else if(avg>=70)
+    {
+        printf("Your grade is C");
+    }
+    else if(avg>=60)
+    {
+        printf("Your grade is D");
+    }
+    else if(avg>=50)
+    {
+        printf("Your grade is D-");
+    }
+    else
+    {
+        printf("You have failed");
+    }
+    perc=((mth+phy+bio+chem+eng)/500)*100;
+    printf("\nYour Percentage is %f",perc);
+    return 0;
+
+
+}
