@@ -1,0 +1,27 @@
+int main()
+{
+     int num1,num2,num3,a,t;
+     printf("Enter first number");
+     scanf("%d",&num1);
+    printf("Enter second number");
+    scanf("%d",&num2);
+    printf("Enter third number");
+    scanf("%d",&num3);
+
+    a=num1>=num2 && num1>=num3?num1:num2>=num3?num2:num3;
+    printf("The greatest among three numbers is %d",a);
+    if(num1==num2 && num1>num3) {
+        printf("\nnum1 and num2 are equal and largest");
+    }
+    if(num2==num3 && num2>num1) {
+        printf("\nnum2 and num3 are equal and largest");
+    }
+    if(num3==num1 && num3>num2) {
+        printf("\nnum1 and num3 are equal and largest");
+    }
+    if (num1==num2 && num2==num3) {
+        printf("\nAll are equal");
+    }
+
+    return 0;
+}
