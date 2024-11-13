@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int a,i,sum=0;
+    printf("Enter the Number of no.s : ");
+    scanf("%d",&a);
+    for(i=0;i<=a;i++) {
+        sum=sum+i;
+    }
+    printf("The sum of first %d no.s is %D",a,sum);
+    return 0;
+}
