@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int a[10],n,i=0,num;
+    printf("Enter the number of numbers\n");
+    scanf("%d",&n);
+    for(i=0;i<n;i++) {
+        printf("Enter a[%d]\n",i);
+        scanf("%d",&num);
+        a[i]=num;
+    }
+    for(i=0;i<n;i++) {
+        printf("%d \t",a[i]);
+    }
+    return 0;
+}
