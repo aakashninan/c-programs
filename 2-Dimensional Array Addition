@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main() {
+    int row,columns,i,j,a[30][30],b[30][30],c[30][30];
+    printf("Enter the number of rows : ");
+    scanf("%d",&row);
+    printf("Enter the number of columns : ");
+    scanf("%d",&columns);
+    for(i=0;i<row;i++) {
+        for(j=0;j<columns;j++) {
+            printf("Enter the value of a[%d][%d] : ",i,j);
+            scanf("%d",&a[i][j]);
+
+        }
+
+    }
+    printf("\n");
+    for(i=0;i<row;i++) {
+        for(j=0;j<columns;j++) {
+            printf("Enter the value of b[%d][%d] : ",i,j);
+            scanf("%d",&b[i][j]);
+
+        }
+    }
+
+    for(i=0;i<row;i++) {
+        for(j=0;j<columns;j++) {
+            c[i][j]=a[i][j]+b[i][j];
+
+        }
+    }
+    for(i=0;i<row;i++) {
+        printf("\n");
+        for(j=0;j<columns;j++) {
+            printf("%d\t",c[i][j]);
+
+        }
+    }
+    return 0;
+}
