@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    int num1,num2,max;
+    printf("Enter a number : ");
+    scanf("%d",&num1);
+    printf("Enter a number : ");
+    scanf("%d",&num2);
+    max=(num1+num2+abs(num1-num2))/2;
+    printf("Greatest among %d and %d is is %d ",num1,num2,max);
+    return 0;
+}
