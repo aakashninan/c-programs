@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int a[10],n,i=0,num,occ=0;
+    printf("Enter the number of numbers\n");
+    scanf("%d",&n);
+    for(i=0;i<n;i++) {
+        printf("Enter a[%d]\n",i);
+        scanf("%d",&num);
+        a[i]=num;
+    }
+    printf("Enter the number you want to find\n");
+    scanf("%d",&num);
+    for(i=0;i<n;i++) {
+        if(a[i]==num) {
+            occ++;
+        }
+    }
+    if(occ==0) {
+        printf("No occurence");
+    }
+    else {
+        printf("No of occurence of %d is=%d",num,occ);
+    }
+}
