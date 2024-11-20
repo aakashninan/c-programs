@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+    int i,a;
+    printf("1.Play game\n2.Exit game\nEnter your option : ");
+    scanf("%d",&a);
+    while(a==1)
+    {
+        printf("Guess the number : ");
+        scanf("%d",&i);
+        srand(time(NULL));
+        int r=(rand()%10)+1;
+        if(r==i) {
+            printf("\nThe number You guessed is right \nYou win!!");
+        }
+        else {
+            printf("\nWrong it's %d \nBetter luck next time",r);
+        }
+        a==0;
+        printf("\nDo you wish to continue");
+        scanf("%d",&a);
+    }
+    if(a!=1)
+        printf("Exited Game");
+    return 0;
+}
