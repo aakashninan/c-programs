@@ -1,0 +1,44 @@
+#include <stdio.h>
+int addon() {
+    int x,j,sum;
+    printf("Enter a number");
+    scanf("%d",&x);
+    printf("Enter another number");
+    scanf("%d",&j);
+    sum=x+j;
+    printf("Sum is %d",sum);
+    return 0;
+}
+int diffon() {
+    int y,z,diff;
+    printf("Enter a number");
+    scanf("%d",&y);
+    printf("Enter another number");
+    scanf("%d",&z);
+    diff=y-z;
+    printf("Difference is %d",diff);
+    return 0;
+}
+int prodon() {
+    int a,b,prod;
+    printf("Enter a number");
+    scanf("%d",&a);
+    printf("Enter another number");
+    scanf("%d",&b);
+    prod=a*b;
+    printf("Product is %d",prod);
+    return 0;
+}
+int main() {
+    printf("In main function\n\n");
+    printf("In a Function to Calculate sum\n\n");
+
+    addon();
+    printf("\n\nBack in main function\n\n");
+    printf("In a Function to Calculate difference\n");
+    diffon();
+    printf("\n\nBack in main function\n \n");
+    printf("In a Function to Calculate product\n\n");
+    prodon();
+    return 0;
+}
