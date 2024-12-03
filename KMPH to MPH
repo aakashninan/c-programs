@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+   int kph,mph;
+   printf("Enter the speed in KMPH ");
+   scanf("%d",&kph);
+   mph=kph/1.609;
+   printf("The speed in MPH  is %d",mph);
+   return 0;
+
+}
