@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main() {
+    int row1,row2,col1,col2,a[50][50],b[50][50],m[50][50];
+    printf("Enter rows and columns of Matrix 1 :\n");
+    scanf("%d %d",&row1,&col1);
+    printf("Enter rows and columns of Matrix 2 :\n");
+    scanf("%d%d",&row2,&col2);
+    for(int i=0;i<row1;i++) {
+        for(int j=0;j<col1;j++) {
+           printf("Enter element of Matrix 1 [%d][%d]:",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter Values for Second Matrix\n");
+    for(int i=0;i<row2;i++) {
+        for(int j=0;j<col2;j++) {
+            printf("Enter element of Matrix 2 [%d][%d]:",i,j);
+
+            scanf("%d",&b[i][j]);
+
+        }
+    }
+    for(int i=0;i<row1;i++) {
+        for(int j=0;j<col1;j++) {
+            printf("%d\t",a[i][j]);
+
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for(int i=0;i<row2;i++) {
+        for(int j=0;j<col2;j++) {
+            printf("%d\t",b[i][j]);
+
+        }
+        printf("\n");
+    }
+    if(row1==col2) {
+        printf("Product two Matrix=:\n");
+
+        for(int i=0;i<row1;i++) {
+            for(int j=0;j<col2;j++) {
+                for(int k=0;k<col1;k++) {
+                    m[i][j]=m[i][j]+(a[i][k]*b[k][j]);
+                }
+            }
+        }
+
+        for(int i=0;i<row1;i++) {
+            for(int j=0;j<col2;j++) {
+                printf("%d\t ",m[i][j]);
+
+            }
+            printf("\n");
+        }
+    } else {
+        printf("Invalid=:\n");
+    }
+
+
+
+    return 0;
+}
