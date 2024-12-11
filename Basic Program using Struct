@@ -1,0 +1,29 @@
+#include <stdio.h>
+struct book {
+    char aname[50];
+    char bname[50];
+    float price;
+};
+int main() {
+    struct book b1,b2;
+    printf("Book 1 \n");
+    printf("Author Name");
+    scanf("%s",b1.aname);
+    printf("\nBook Name");
+    scanf("%s",b1.bname);
+    printf("\nBook Price");
+    scanf("%f",&b1.price);
+    printf("\nBook 2");
+    printf("\nAuthor Name");
+    scanf("%s",b2.aname);
+    printf("\nBook Name");
+    scanf("%s",b2.bname);
+    printf("\nBook Price");
+    scanf("%f",&b2.price);
+    printf("\nBook 1 Details\n");
+    printf("Author Name-%s\nBook Name-%s,\nBook Price-%f",b1.aname,b1.bname,b1.price );
+    printf("\n");
+    printf("\nBook 2 Details\n");
+    printf("Author Name-%s\nBook Name-%s,\nBook Price-%f",b2.aname,b2.bname,b2.price );
+    return 0;
+}
