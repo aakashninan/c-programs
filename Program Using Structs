@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct Book {
+    char title[100];
+    char author[50];
+    float price;
+    int pubyear;
+};
+int main() {
+    struct Book myBook;
+    printf("Enter the title of the book: ");
+    fgets(myBook.title, sizeof(myBook.title), stdin);
+    printf("Enter the author of the book: ");
+    fgets(myBook.author, sizeof(myBook.author), stdin);
+    printf("Enter the price of the book: ");
+    scanf("%f", &myBook.price);
+    printf("Enter the publication year of the book: ");
+    scanf("%d", &myBook.pubyear);
+    printf("\nBook Details:\n");
+    printf("Title: %s", myBook.title);
+    printf("Author: %s", myBook.author);
+    printf("Price: %.2f\n", myBook.price);
+    printf("Publication Year: %d\n", myBook.pubyear);
+    return 0;
+}
