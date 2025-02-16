@@ -1,0 +1,76 @@
+#include<stdio.h>
+int main() {
+    int array[100][100];
+    int rep[100][3];
+    int row, col;
+    printf("Enter the number of rows for an array");
+    scanf("%d",&row);
+    printf("Enter the number of columns for an array");
+    scanf("%d",&col);
+    int size;
+    size=row*col;
+    for(int i=0;i<row;i++) {
+        for(int j=0;j<col;j++) {
+            printf("\nEnter element in array[%d][%d]",i,j);
+            scanf("%d",&array[i][j]);
+        }
+    }
+    int c=0;
+    for(int i=0;i<row;i++) {
+        for(int j=0;j<col;j++) {
+            if(array[i][j]==0) {
+                c++;
+
+            }
+        }
+    }
+    if(c>size/2) {
+        printf("\nThe matrix is a sparse matrix\n\n ");
+        printf("\n\n Column Major Representation\n");
+        printf("Row \t Column\t Value");
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                if(array[i][j]!=0) {
+                    printf("\n   %d\t    %d\t    %d",i,j,array[i][j]);
+
+
+                }
+            }
+        }
+        printf("\n\n Row Major representation\n\n");
+        printf("Row\t\t");
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                if(array[i][j]!=0) {
+                    printf("%d\t",i);
+    }
+            }
+
+        }
+        printf("\n");
+        printf("Column\t");
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                if(array[i][j]!=0) {
+                    printf("%d\t",j);
+    }
+            }
+
+        }
+        printf("\n");
+        printf("Value\t");
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                if(array[i][j]!=0) {
+                    printf("%d\t",array[i][j]);
+    }
+            }
+
+        }
+    }
+        else {
+            printf("\nThe matrix is not a sparse matrix ");
+        }
+
+    return 0;
+        }
