@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    int poly[6];
+    printf("The degree of the polynomial can be at most 5\n");
+    printf("\nIf coefficient is 0, please type zero");
+
+    for (i = 0; i <= 5; i++) {
+        printf("\nEnter the coefficient of degree %d: ", i);
+        scanf("%d", &poly[i]);
+    }
+
+    printf("\nPolynomial 1: ");
+    for (i = 5; i >= 0; i--) {
+        if (poly[i] != 0) {
+            printf("%dx^%d", poly[i], i);
+            if (i > 0) {
+                printf(" + ");
+            }
+        }
+    }
+
+
+    int poly2[6];
+    printf("\n\nPolynomial 2: ");
+    for (i = 0; i <= 5; i++) {
+        printf("\nEnter the coefficient of degree %d: ", i);
+        scanf("%d", &poly2[i]);
+    }
+
+
+    printf("\nPolynomial 2: ");
+    for (i = 5; i >= 0; i--) {
+        if (poly2[i] != 0) {
+            printf("%dx^%d", poly2[i], i);
+            if (i > 0) {
+                printf(" + ");
+            }
+        }
+    }
+
+
+    int polym[11] = {0};
+    for (i = 0; i <= 5; i++) {
+        for (int j = 0; j <= 5; j++) {
+            polym[i + j] += poly[i] * poly2[j];
+        }
+    }
+
+
+    printf("\n\nResulting Polynomial (Product): ");
+    for (i = 10; i >= 0; i--) {
+        if (polym[i] != 0) {
+            printf("%dx^%d", polym[i], i);
+            if (i > 0) {
+                printf(" + ");
+            }
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
