@@ -1,0 +1,74 @@
+#include<stdio.h>
+int q[5],i=0,rear=-1,front=-1,c;
+void enqueue()
+{
+    if(rear==-1 && front==-1)
+    {
+        front=0;
+    }
+    else if((rear+1)%5==front)
+    {
+        printf("Queue Full");
+        return;
+    }
+    rear=(rear+1)%5;
+    printf("Enter element:");
+    scanf("%d",&q[rear]);
+}
+void dequeue()
+{
+    if(rear==-1 && front==-1)
+    {
+        printf("Empty Queue");
+    }
+    else if(rear==front)
+    {
+        rear=-1;
+        front=-1;
+    }
+    else
+    {
+        front=(front+1)%5;
+    }
+}
+void Display()
+{
+    i=front;
+    while(i!=rear)
+    {
+        printf("%d\n",q[i]);
+        i=(i+1)%5;
+    }
+    printf("%d\n",q[rear]);
+}
+int main()
+{
+    printf("The size of the array is 5");
+    while(1)
+    {
+        printf("\n1.Enqueue\n2.Dequeue\n3.Display\n4.Exit\n");
+        printf("Enter your choice:");
+        scanf("%d",&c);
+        if(c==1)
+        {
+            enqueue();
+        }
+        else if(c==2)
+        {
+            dequeue();
+        }
+        else if(c==3)
+        {
+            Display();
+        }
+        else if(c==4)
+        {
+            printf("Exiting Program");
+            return 0;
+        }
+        else
+        {
+            printf("\nEnter a valid choice\n");
+        }
+    }
+}
